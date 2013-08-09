@@ -1,3 +1,5 @@
+import os
+
 # Django settings for ui project.
 
 DEBUG = True
@@ -108,7 +110,7 @@ ROOT_URLCONF = 'ui.urls'
 WSGI_APPLICATION = 'ui.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/Users/raymondxiwei/Documents/Jandgeo_Project/client/ui/templates',
+    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
