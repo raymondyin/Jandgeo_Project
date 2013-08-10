@@ -6,10 +6,12 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	
+	<script src="Chart.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="createChart();">
+	<canvas id="myChart" width="400" height="400"></canvas>
 
 	<div class="container">
 		<div class="row">
@@ -38,7 +40,10 @@
 			</div>
 
 
-			<div class="col-lg-10"></div>
+			<div class="col-lg-10">
+
+
+			</div>
 		</div>
 
 		<div class="nav">
@@ -52,7 +57,7 @@
 	<hr>
 
 	<p>Page designed by Xiwei Yin | © Jandgeo Airplus Inc. 2013 </p>
-	</div>
+</div>
 
 
 </body>
