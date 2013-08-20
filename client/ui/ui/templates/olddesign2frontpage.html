@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jandgeo Client Interface Frontpage">
+    <meta name="author" content="Xiwei Yin (Raymond)">
+    <!--     <link rel="shortcut icon" href="../../assets/ico/favicon.png"> -->
+
+    <title>Jandgeo - Use less, save more, live better</title>
+
+    <!-- Bootstrap core CSS -->
+    {% load staticfiles %}
+    <link href="{% static "/media/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    {% load staticfiles %}
+    <link href="{% static "/media/css/jumbotron-narrow.css" %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="http://jandgeo.blog.com/">Blog</a></li>
+          <li><a href="http://www.jandgeo.com/about.html">About</a></li>
+          <li><a href="http://www.jandgeo.com/contact.html">Contact</a></li>
+        </ul>
+        <h3>Jandgeo Dashboard</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Ready to Check Your J-Score?</h1>
+        <p class="lead">Through Jandgeo Dashboard, you can check the data about your home such as air condition, power usage.</p>
+        <p><a class="btn btn-lg btn-success" href="/dashboard">Login</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Note</h4>
+          <p>For demostrative purporse, the process of login is skipped for now.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Not a Site</h4>
+          <p>This is the frontpage of client in the local Raspberry Pi machine.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Jandgeo Airplus Inc. 2013 by Xiwei Yin</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

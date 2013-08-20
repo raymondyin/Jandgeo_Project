@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jandgeo Airplus Interface</title>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="media/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="/media/css/bootstrap.css">
+	
+	<script src="media/js/Chart.js"></script>
+	<script>
+        function createChart()
+        {
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myChart").getContext("2d");
+ 
+            //Create the data object to pass to the chart
+            var data = {
+                labels : ["January","February","March","April","May","June","July"],
+                datasets : [
+                            {
+                                fillColor : "rgba(220,220,220,0.5)",
+                                strokeColor : "rgba(220,220,220,1)",
+                                data : [65,59,90,81,56,55,40]
+                            },
+                            {
+                                fillColor : "rgba(151,187,205,0.5)",
+                                strokeColor : "rgba(151,187,205,1)",
+                                data : [28,48,40,19,96,27,100]
+                            }
+                           ]
+                      };
+ 
+            //The options we are going to pass to the chart
+            options = {
+                barDatasetSpacing : 15,
+                barValueSpacing: 10
+            };
+ 
+            //Create the chart
+            new Chart(ctx).Bar(data, options);
+        }
+        </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="createChart();">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2"><img src="/media/img/logo.png" /></div>
+
+			<div class="col-lg-10">
+				<div class="navbar">
+					<a href="#" class="navbar-brand">Jandgeo Airplus</a>
+					<p class="navbar-text">Dashboard</p>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-lg-2">
+				<div class="container">
+					<div class="list-group">
+						<a href="#" class="list-group-item active">Device 01</a>
+						<a href="#" class="list-group-item">Device 02</a>
+						<a href="#" class="list-group-item">Device 03</a>
+						<a href="#" class="list-group-item">Device 04</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-10">
+
+				<canvas id="myChart" width="400" height="400"></canvas>
+
+			</div>
+		</div>
+
+		<div class="nav">
+			<h1></h1>
+		</div>
+		
+		<!-- <div class="header">
+			
+	</div> -->
+	
+	<hr>
+
+	<p>Page designed by Xiwei Yin | © Jandgeo Airplus Inc. 2013 </p>
+</div>
+
+
+</body>
+</html>
