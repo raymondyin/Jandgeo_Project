@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Dashboard - Jandgeo</title>
+
+    <!-- Bootstrap core CSS -->
+    {% load staticfiles %}
+    <link href="{% static "/media/css/bootstrap.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "/media/css/dashboard.css" %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Chart.js scriopt -->
+    <script type="text/javascript" src="{% static "/media/js/Chart.js" %}"></script>
+    <script type="text/javascript" src="{% static "/media/js/graphscript.js" %}"></script>
+
+  </head>
+
+  <body onload="renderCharts();">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dashboard 1.0 beta</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/dashboard">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row" id="content">
+
+        <div class="col-lg-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">Device 01 Voltage Sensor</h4>
+              <p class="list-group-item-text">A dummy device, for the sole purpose of testing and illustration. The data on the right chart is a illustration of one form of display.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Device 01 Voltage Sensor</h3>
+            </div>
+            <div class="panel-body">
+              <canvas id="myChart" width="700" height="400"></canvas>
+              <canvas id="myChart2" width="700" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static "/media/js/jquery-1.10.2.min.js" %}"></script>
+    <script src="{% static "/media/js/bootstrap.js" %}"></script>
+    <script type="text/javascript">
+      function renderCharts(){
+      // setInterval(function renderAll(){
+      //  createChart();
+      var sampledata="{% static "/media/data/testoutput.json" %}";
+      obj = JSON.parse(sampledata);
+
+      //alert(obj.t130816043436);
+      // }, 2000);
+      // createChart2();
+
+      }
+    </script>
+  </body>
+</html>
