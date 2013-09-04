@@ -79,3 +79,29 @@ function createChart2()
 	linechart = new Chart(ctx).Line(data, options);
 
 }
+
+function createRadar()
+{
+	// Get context
+	var ctx=$("#myChart").get(0).getContext("2d");
+	// Get data
+	var data = {
+	labels : ["CO","CO2","VOC", "test3"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,1)",
+			pointColor : "rgba(220,220,220,1)",
+			pointStrokeColor : "#fff",
+			data : [65,59,56, 400]
+		}
+		]
+	}
+
+	// Options to be passed in.
+	options ={
+
+	};
+
+	radarchart = new Chart(ctx).Radar(data, options)
+}

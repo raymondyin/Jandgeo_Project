@@ -72,6 +72,7 @@
             <div class="panel-body">
               <canvas id="myChart" width="700" height="400"></canvas>
               <canvas id="myChart2" width="700" height="400"></canvas>
+              <canvas id="myChart3" width="700" height="400"></canvas>
             </div>
           </div>
         </div>
@@ -90,12 +91,13 @@
       function renderCharts(){
       // setInterval(function renderAll(){
       //  createChart();
-      var sampledata="{% static "/media/data/testoutput.json" %}";
-      obj = JSON.parse(sampledata);
-
-      //alert(obj.t130816043436);
+      // var sampledata= {{bigdata|safe}} 
+        // : {"t130816043436": "367", "t130816043427": "369", "t130816043431": "365"}};
+      
+      // alert(sampledata);
       // }, 2000);
       // createChart2();
+      createRadar();
 
       }
     </script>
